@@ -1,0 +1,503 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
+  border-radius: 1rem;
+}
+
+.listing-card:hover {
+  transform: translateY(-6px);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.listing-card:hover .card-img-top {
+  transform: scale(1.02);
+  filter: brightness(1.03);
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400 !important;
+}
+
+/* Show card styling improvements */
+.show-card.listing-card .card-body {
+  padding: 1rem 0 !important;
+}
+
+.show-card.listing-card .card-text {
+  margin-bottom: 0.75rem;
+}
+
+.listing-link {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.listing-link:hover {
+  text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New Page */
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 1.5rem auto;
+  padding-left: 26% !important;  /* Match the offset of the image card */
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  width: auto;
+  padding-left: 0;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Map */
+
+#map {
+  height: 400px;
+  width: 80vh;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .col-8.offset-3,
+  .col-6.offset-3,
+  .card.col-6.offset-3 {
+    width: 70% !important;
+    margin-left: 15% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-8.offset-3,
+  .col-6.offset-3,
+  .card.col-6.offset-3 {
+    width: 90% !important;
+    margin-left: 5% !important;
+  }
+
+  /* Improve show card text alignment for tablet */
+  .show-card.listing-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .show-card.listing-card .card-body {
+    padding: 1rem 1.5rem !important;
+  }
+
+  #map {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+  }
+
+  .btns-container {
+    justify-content: center;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .btns {
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  
+  .btns .btn,
+  .btns form,
+  .btns form .btn {
+    width: auto;
+    min-width: 100px;
+  }
+
+  .btn.col-1.offset-3 {
+    width: auto !important;
+    margin-left: 0 !important;
+  }
+
+  .btns form {
+    margin: 0;
+  }
+
+  .btns form .btn {
+    margin-left: 0;
+  }
+
+  /* Review cards in mobile */
+  .card.col-5 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Adjust hover effects for mobile */
+  .listing-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Additional responsive improvements */
+@media screen and (max-width: 768px) {
+  /* Improve title spacing */
+  .row.mt-3 h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Improve spacing between review cards */
+  .row .card.col-5 {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Better spacing for review form */
+  .col-8.offset-3.mb-3 {
+    padding: 0 1rem;
+  }
+
+  /* Improve map title alignment */
+  .col-6.offset-3.mb-3 h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .show-img {
+    height: 25vh;
+  }
+
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  /* Center text in show page card for mobile */
+  .listing-card .card-body {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.25rem !important;
+  }
+
+  .listing-card .card-text {
+    text-align: start !important;
+    margin: 0.5rem auto !important;
+    width: 100%;
+  }
+
+  .btns-container {
+    justify-content: center;
+    padding-left: 0% !important;
+  }
+  
+  .btns {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .btns .btn,
+  .btns form,
+  .btns form .btn {
+    min-width: 120px;
+  }
+
+  #map {
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  /* Adjust review form and comments */
+  .card.col-5 {
+    padding: 0.5rem;
+  }
+
+  .starability-slot {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Adjust review form */
+  .needs-validation {
+    padding: 0.5rem;
+  }
+
+  /* Improve spacing and readability */
+  .card-text {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Improve spacing between reviews */
+  .card.col-5.ms-3.mb-3 {
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Center align all review card content */
+  .card-body {
+    text-align: center;
+  }
+}
+
+.blend-bg {
+  width: 65px;
+  height: 65px;
+  background-image: url("/images/logo.png"),
+    linear-gradient(to bottom right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+  background-blend-mode: screen; /* or overlay, screen, lighten, etc. */
+  background-size: cover;
+  background-position: center;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+/* Flash message styles to ensure visibility */
+.flash-message-container {
+  position: fixed !important;
+  top: 80px !important; /* Increased from 20px to be below navbar */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important; /* Increased z-index */
+  width: 100% !important;
+  max-width: 800px !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.alert {
+  margin: 1rem !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Add specific styles for success and error alerts */
+.alert-success {
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+  color: #155724 !important;
+}
+
+.alert-danger {
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+  color: #721c24 !important;
+}
+
+.fa-circle-user {
+  font-size: 1.1rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: bolder;
+}
+
+/* Review Card Styling */
+.card.col-5.ms-3.mb-3 {
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  overflow: hidden;
+  margin-bottom: 1.5rem !important;
+}
+
+.card.col-5.ms-3.mb-3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card.col-5.ms-3.mb-3 .card-body {
+  padding: 1.25rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card.col-5.ms-3.mb-3 .card-title {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.card.col-5.ms-3.mb-3 .starability-result {
+  margin: 0.5rem 0;
+}
+
+.card.col-5.ms-3.mb-3 .card-text {
+  margin-bottom: 1rem;
+}
+
+.card.col-5.ms-3.mb-3 form {
+  margin-top: auto;
+}
+
+/* Responsive adjustments for review cards */
+@media (max-width: 768px) {
+  .card.col-5.ms-3.mb-3 {
+    width: 45% !important;
+    margin: 0.5rem !important;
+    border-radius: 10px;
+  }
+
+  .card.col-5.ms-3.mb-3 .card-body {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .card.col-5.ms-3.mb-3 {
+    width: 100% !important;
+    margin: 0.75rem 0 !important;
+    border-radius: 8px;
+  }
+
+  .card.col-5.ms-3.mb-3 .card-body {
+    gap: 0.5rem;
+  }
+}
+
+/* Review stars centering - consolidated */
+@media screen and (max-width: 768px) {
+  .show-card .starability-result {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0.5rem auto !important;
+  }
+
+  .starability-result {
+    margin: 1.5rem auto !important;
+    display: block !important;
+    float: none !important;
+  }
+
+}
+

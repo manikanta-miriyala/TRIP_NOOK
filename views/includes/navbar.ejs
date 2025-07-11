@@ -1,0 +1,291 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: #fff;
+    opacity: 0.9;
+  }
+
+  .search-btn i {
+    display: inline;
+    margin-right: 0.75rem; /* Slightly increase icon spacing */
+  }
+
+  .search-input {
+    border-radius: 25px;
+    padding: 0.5rem 0.6rem;
+    width: 100%;
+    margin-left: 100px;
+  }
+
+  /* Desktop search form layout */
+  .navbar-nav form.d-flex {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 2rem;
+    display: flex !important;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      position: relative;
+    }
+
+    .navbar-nav:nth-child(2) {
+      margin: 0 auto;
+    }
+  }
+
+  /* Navbar collapse default styles */
+  .navbar-collapse {
+    align-items: center;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-left: auto !important;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .navbar-nav form.d-flex .search-input {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .navbar-nav form.d-flex .search-btn {
+    flex: 0 0 auto;
+  }
+
+  /* Update nav-link styles */
+  .nav-link {
+    padding: 0.75rem 1rem;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-link:hover {
+    opacity: 0.8;
+  }
+
+  /* Update Escapes heading style */
+  .navbar-nav h5 {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.25rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.3s ease;
+      transition: all 0.3s ease-in-out; /* Smoother transition */
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .navbar-nav {
+      padding: 0.5rem 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .navbar-nav h5 {
+      font-size: 1.1rem;
+      margin: 0;
+      padding: 0.75rem;
+      display: inline-block;
+    }
+
+    .nav-link {
+      padding: 0.75rem 1rem !important;
+      margin: 0.4rem 0;
+      border-radius: 8px;
+      transition: all 0.2s ease-in-out; /* Faster hover response */
+    }
+
+    .nav-link:hover {
+      background-color: #f8f9fa;
+    }
+
+    /* Search form styles */
+    form.d-flex {
+      flex-direction: column;
+      width: 100%;
+      max-width: none;
+      margin: 0.5rem 0;
+      padding: 1rem 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      gap: 0.75rem; /* Consistent spacing */
+    }
+
+    .search-input {
+      margin: 0; /* Remove margin */
+      width: 100%;
+    }
+
+    .search-btn {
+      width: 100%;
+      margin: 0;
+    }
+
+    /* User action buttons */
+    .navbar-nav.ms-auto {
+      border-top: 1px solid #eee;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .navbar-nav.ms-auto .nav-link {
+      margin: 0.4rem 0;
+    }
+
+    .navbar-nav.ms-auto .nav-link b {
+      display: block;
+      padding: 0.75rem; /* Consistent padding */
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover b {
+      background-color: #f8f9fa;
+    }
+  }
+
+  /* Update navbar-brand styling */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .blend-bg {
+    width: 45px;
+    height: 45px;
+    margin-right: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    background-blend-mode: normal;
+  }
+
+  .navbar-brand span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #222222;
+    white-space: nowrap;
+  }
+
+  /* Improve toggle button appearance */
+  .navbar-toggler {
+    border: none;
+    padding: 0.4rem 0.6rem;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .navbar-toggler:hover {
+    background-color: #f8f9fa;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    min-height: 70px;
+    padding: 0.5rem 1rem;
+    z-index: 1030; /* Add explicit z-index */
+  }
+
+  @media (max-width: 768px) {
+    .navbar-brand span {
+      font-size: 1.2rem;
+    }
+
+    .blend-bg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+</style>
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings">
+      <img src="/images/logo.png" alt="Logo" class="blend-bg" />
+      <span><b>TripNook</b></span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <!-- <a class="nav-link" href="/listings"><h5>Escapes</h5></a> -->
+      </div>
+
+      <div class="navbar-nav">
+        <form class="d-flex" role="search" method="GET" action="/listings">
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Navigate Listing"
+            name="q"
+          />
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Explore
+          </button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new"><b>Add Your Listing</b></a>
+        <% if(!currUser) { %>
+        <a class="nav-link" href="/signup"><b>Sign up</b></a>
+        <a class="nav-link" href="/login"><b>Log in</b></a>
+        <% } %> <% if(currUser) { %>
+        <a class="nav-link" href="/logout"><b>Log out</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
