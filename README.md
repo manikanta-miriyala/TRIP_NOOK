@@ -4,7 +4,7 @@ A full-featured travel accommodation marketplace platform that allows users to d
 
 ## 🌐 Live Website
 
-**[Visit TripNook](https://aurora-escapes.onrender.com/listings)**
+**[Visit TripNook](http://trip-nook.onrender.com/listings)**
 
 Explore the live deployment to experience all features in action!
 
