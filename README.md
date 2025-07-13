@@ -4,7 +4,7 @@ A full-featured travel accommodation marketplace platform that allows users to d
 
 ## 🌐 Live Website
 
-**[Visit TripNook](http://trip-nook.onrender.com/listings)**
+**[Visit TripNook](https://aurora-escapes.onrender.com/listings)**
 
 Explore the live deployment to experience all features in action!
 
@@ -404,7 +404,7 @@ This project is available for reference and educational purposes.
 - TripNook was created as part of a web development learning journey
 - Special thanks to all open-source libraries that made this project possible
 - Thanks to MongoDB, Cloudinary, and MapBox for their excellent services and documentation
-- Visit the live site at [https://aurora-escapes.onrender.com/listings](https://aurora-escapes.onrender.com/listings)
+- Visit the live site at [https://trip-nook.onrender.com](https://trip-nook.onrender.com)
 
 ---
 
